@@ -21,4 +21,3 @@ class WeatherRequest:
 
 tempo = WeatherRequest(config.link)
 tempo.get()
-

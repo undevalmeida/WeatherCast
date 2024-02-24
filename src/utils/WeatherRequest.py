@@ -1,23 +1,27 @@
 import requests
-import config
-
-
-requisicao = requests.get(config.link)
-print(requisicao.json())
+from config_api.config import link
 
 class WeatherRequest:
     """ Classe que ficará responsável pelas requisições das previsões do tempo """
     def __init__(self, link):
         self.link = link
 
-    def get(self):
-        """ Método para fazer solicitação da API"""
+    def get_temperatura(self):
+        """ Método para fazer solicitação da API sobre a temperatura em celsius"""
         request = requests.get(self.link)
         if request.status_code == 200:
             return request.json()
         return print("Erro ao fazer requisição", request.status_code)
 
+tempo = WeatherRequest(link)
+json_data = tempo.get_temperatura()
+local = json_data['name']
+descricao = json_data['weather'][0]['description'].capitalize()
+temperatura = json_data['main']['temp']
+sensacao = json_data['main']['feels_like']
+umidade = json_data['main']['humidity']
 
 
-tempo = WeatherRequest(config.link)
-tempo.get()
+
+
+print(f"Local: {local}\nDescrição: {descricao}\nTemperatura: {temperatura - 273.15:.2f}ºC\nSensação Térmica: {sensacao - 273.15:.2f}\nUmidade: {umidade}")

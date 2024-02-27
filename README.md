@@ -3,7 +3,7 @@
 ## Introdução
 Este projeto tem como objetivo desenvolver um sistema em Python 3.11 para extrair
 dados da API de previsão do tempo. Através da utilização da biblioteca Requests, 
-faremos requisições HTTP à API para obter informações atualizadas sobre as condições 
+faremos requisições à API para obter informações atualizadas sobre as condições 
 meteorológicas.
 
 ## Funcionalidades

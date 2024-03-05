@@ -25,5 +25,5 @@ temperatura = json_data['main']['temp']
 sensacao = json_data['main']['feels_like']
 umidade = json_data['main']['humidity']
 data = json_data['dt']
-
+# ainda esturando a api advisor api clima tempo, quero trazer previsões
 print(f"Local: {local}\nData: {datetime.utcfromtimestamp(data).date()}\nDescrição: {descricao}\nTemperatura: {temperatura - 273.15:.2f}ºC\nSensação Térmica: {sensacao - 273.15:.2f}\nUmidade: {umidade}")

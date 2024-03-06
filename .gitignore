@@ -1,4 +1,2 @@
 .idea/
-src/utils/config_api/
-tests/
-src/utils/__pycache__/
+src/utils/config.py

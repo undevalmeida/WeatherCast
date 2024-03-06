@@ -19,7 +19,7 @@ class WeatherRequest:
 tempo = WeatherRequest(config.link)
 previsao = tempo.get()
 #print(previsao['data']['date'])
-print(previsao)
-print(previsao['data'][0]['date_br'], previsao['data'][0]['humidity'])
+#print(previsao)
+print(f"Data: {previsao['data'][0]['date_br']}", f"Probabilidade de Chuva: {previsao['data'][0]['rain']['probability']}", f"Temperatura:{previsao['data'][0]['temperature']}", f"Texto: {previsao['data'][0]['text_icon']['text']['pt']}")
 #print(json.dumps(previsao, indent=4, ensure_ascii=False))
 

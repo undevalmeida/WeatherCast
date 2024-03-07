@@ -1,6 +1,6 @@
 import requests
-import config
-import json
+from src.utils.config_api.config import link
+#import json
 
 class WeatherRequest:
     """ Classe que ficará responsável pelas requisições das previsões do tempo no período de 15 dias"""
@@ -16,10 +16,10 @@ class WeatherRequest:
 
 
 
-tempo = WeatherRequest(config.link)
+tempo = WeatherRequest(link)
 previsao = tempo.get()
 #print(previsao['data']['date'])
 #print(previsao)
-print(f"Data: {previsao['data'][0]['date_br']}", f"Probabilidade de Chuva: {previsao['data'][0]['rain']['probability']}", f"Temperatura:{previsao['data'][0]['temperature']}", f"Texto: {previsao['data'][0]['text_icon']['text']['pt']}")
+print(f"Data: {previsao['data'][0]['date_br']}", f"Probabilidade de Chuva: {previsao['data'][0]['rain']['probability']}%", f"Temperatura:{previsao['data'][0]['temperature']}", f"Texto: {previsao['data'][0]['text_icon']['text']['pt']}")
 #print(json.dumps(previsao, indent=4, ensure_ascii=False))
 

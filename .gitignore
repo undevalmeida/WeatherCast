@@ -1,2 +1,2 @@
 .idea/
-src/utils/config.py
+src/utils/config_api/config.py

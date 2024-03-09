@@ -5,11 +5,24 @@ import json
 class WeatherRequest:
     """ Classe que ficará responsável pelas requisições das previsões do tempo no período de 15 dias"""
     def __init__(self, link):
+        """
+        Inicializa a instância da classe WeatherRequest.
+        Args:
+            link (str): O link para a API de previsão do tempo.
+        """
         self.link = link
 
     @property
     def three_days_forecast(self):
-        """ Método para fazer solicitação da API"""
+        """
+        Obtém a previsão do tempo para os próximos três dias.
+
+        Este método faz uma solicitação à API de previsão do tempo e imprime as informações de previsão para os próximos três dias,
+        incluindo a data, a probabilidade de chuva e a temperatura mínima e máxima.
+
+        Returns:
+            None. As informações de previsão são impressas na saída padrão.
+        """
         request = requests.get(self.link)
         if request.status_code == 200:
             previsao_tempo = request.json()

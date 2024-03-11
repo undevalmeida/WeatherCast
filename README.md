@@ -1,8 +1,8 @@
 # Projeto de Extração de Dados da API de Previsão do Tempo
 
 ## Introdução
-Este projeto visa desenvolver um sistema em Python 3.11 para extrair
-dados da API de previsão do tempo. Através da utilização da biblioteca Requests, 
+Este projeto visa desenvolver um sistema em `Python 3.11` para extrair
+dados da API de previsão do tempo utilizando o bot do `instagram`. Através da utilização da biblioteca Requests, 
 faremos requisições à API para obter informações atualizadas sobre as condições 
 meteorológicas.
 
@@ -12,8 +12,9 @@ meteorológicas.
 
 
 ## Tecnologias Utilizadas
-- Python 3.11
-- Requests
+- python = "^3.11"
+- requests = "^2.31.0"
+- pyrogram = "^2.0.106"
 
 ## Configuração do Ambiente de Desenvolvimento
 1. Instale o Python 3.11 em seu sistema.
